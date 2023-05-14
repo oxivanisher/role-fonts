@@ -6,5 +6,5 @@
     mode: "0644"
     owner: root
     group: root
-  loop: fonts_files
+  loop: "{{ fonts_files }}"
   notify: Rebuild font cache
