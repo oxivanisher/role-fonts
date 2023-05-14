@@ -1,5 +1,4 @@
 ---
-
 - name: Copy fonts
   ansible.builtin.copy:
     src: "{{ item }}"
@@ -9,4 +8,3 @@
     group: root
   loop: fonts_files
   notify: Rebuild font cache
-
