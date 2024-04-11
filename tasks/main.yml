@@ -8,3 +8,5 @@
     group: root
   loop: "{{ fonts_files }}"
   notify: Rebuild font cache
+  become: true
+  become_user: root

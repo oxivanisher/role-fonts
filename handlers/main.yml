@@ -1,5 +1,6 @@
 ---
 - name: Rebuild font cache
-  become: true
   ansible.builtin.command: "/usr/bin/fc-cache -v -f"
   changed_when: false
+  become: true
+  become_user: root
