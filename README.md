@@ -13,9 +13,7 @@ None
 Role Variables
 --------------
 
-| Name        | Comment                                                                              | Default value |
-|-------------|--------------------------------------------------------------------------------------|---------------|
-| fonts_files | A list of files from the `{{ playbook_dir }}/files/fonts/` directory to be installed | `[]`          |
+None
 
 Dependencies
 ------------

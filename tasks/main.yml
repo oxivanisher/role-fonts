@@ -11,7 +11,7 @@
 
 - name: Copy font files
   ansible.builtin.copy:
-    src: "{{ playbook_dir }}/files/fonts/{{ item }}"
+    src: "{{ playbook_dir }}/files/fonts/"
     dest: /usr/local/share/fonts
     mode: "0644"
     owner: root
