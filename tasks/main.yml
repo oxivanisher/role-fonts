@@ -1,7 +1,17 @@
 ---
-- name: Copy fonts
+- name: Create custom fonts folder
+  ansible.builtin.file:
+    path: /usr/local/share/fonts
+    state: directory
+    owner: root
+    group: root
+    mode: "0755"
+  become: true
+  become_user: root
+
+- name: Copy font files
   ansible.builtin.copy:
-    src: "{{ item }}"
+    src: "{{ playbook_dir }}/files/fonts/{{ item }}"
     dest: /usr/local/share/fonts
     mode: "0644"
     owner: root

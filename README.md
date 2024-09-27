@@ -1,9 +1,9 @@
 fonts
 =====
 
-Install fonts on Ubuntu desktops from the `files/` directory and rebuilds the fonts cache.
+Install fonts on Ubuntu desktops from the `{{ playbook_dir }}/files/fonts/` directory and rebuilds the fonts cache.
 
-Please be aware that the fonts have to be licensed and this role should only be used internally.
+Please be aware that fonts have to be licensed correctly.
 
 Requirements
 ------------
@@ -13,8 +13,9 @@ None
 Role Variables
 --------------
 
-Configure the file list `fonts_files` in `vars/main.yml`.
-
+| Name        | Comment                                                                              | Default value |
+|-------------|--------------------------------------------------------------------------------------|---------------|
+| fonts_files | A list of files from the `{{ playbook_dir }}/files/fonts/` directory to be installed | `[]`          |
 
 Dependencies
 ------------
@@ -25,10 +26,12 @@ Example Playbook
 ----------------
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+```yaml
+- name: Install desktop fonts
+  hosts: clients
+  roles:
+    - role: oxivanisher.linux_desktop.fonts
+```
 
 License
 -------
@@ -38,5 +41,4 @@ BSD
 Author Information
 ------------------
 
-Marc Urben
-
+This role is part of the [oxivanisher.linux_desktop](https://galaxy.ansible.com/ui/repo/published/oxivanisher/linux_desktop/) collection, and the source for that is located on [github](https://github.com/oxivanisher/collection-linux_desktop).
