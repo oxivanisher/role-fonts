@@ -1,5 +1,6 @@
 fonts
 =====
+[![Ansible Lint](https://github.com/oxivanisher/role-fonts/actions/workflows/ansible-lint.yml/badge.svg)](https://github.com/oxivanisher/role-fonts/actions/workflows/ansible-lint.yml)
 
 Install fonts on Ubuntu desktops from the `{{ playbook_dir }}/files/fonts/` directory and rebuilds the fonts cache.
 
